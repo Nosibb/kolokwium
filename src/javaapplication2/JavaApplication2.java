@@ -20,9 +20,10 @@ public class JavaApplication2 {
         int[] tablica = {-3,1,2,-2,5,6};
         
         
+        
     }
     
-    public int NajwiekszaLiczba(int[] tablica)
+    public static int NajwiekszaLiczba(int[] tablica)
     {
         int max1 = tablica[1];
         
@@ -39,7 +40,7 @@ public class JavaApplication2 {
         return max1;
     }
     
-     public int DrugaNajwiekszaLiczba(int[] tablica)
+     public static int DrugaNajwiekszaLiczba(int[] tablica)
     {
         int max1 = NajwiekszaLiczba(tablica);
         int max2 = tablica[0];
@@ -56,7 +57,7 @@ public class JavaApplication2 {
         return max2;
     }
     
-      public int TrzeciaNajwiekszaLiczba(int[] tablica)
+      public static int TrzeciaNajwiekszaLiczba(int[] tablica)
     {
         int max1 = NajwiekszaLiczba(tablica);
         int max2 = DrugaNajwiekszaLiczba(tablica);
@@ -75,7 +76,7 @@ public class JavaApplication2 {
     }
     
     
-    public int MaxValue(int[] tablica)
+    public static int MaxValue(int[] tablica)
     {
         
         int wynik;
