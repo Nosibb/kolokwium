@@ -7,6 +7,7 @@ package javaapplication2;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -100,5 +101,20 @@ public class JavaApplication2Test {
         assertEquals(expResult, result);
        
     }
+    @Test
+    public void testTriplet() {
+        System.out.println("Triplet");
+        int[] tablica = {-3,1,2,-2,5,6};
+        int naj1 = 6;
+        int naj2 = 5;
+        int naj3 = 2;
+        int[] expResult = {2,4,5};
+        int[] result = JavaApplication2.Triplet(tablica, naj1, naj2, naj3);
+        Assert.assertArrayEquals(expResult, result);
+       
+    }
+    
+    
+    
     
 }

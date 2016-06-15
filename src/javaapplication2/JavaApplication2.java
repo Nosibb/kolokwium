@@ -31,7 +31,8 @@ public class JavaApplication2 {
         {
             if(tablica[i]>max1)
             {
-             max1 = tablica[i];  
+             max1 = tablica[i]; 
+             
             }
             
         }
@@ -44,11 +45,13 @@ public class JavaApplication2 {
     {
         int max1 = NajwiekszaLiczba(tablica);
         int max2 = tablica[0];
+        
         for (int i = 0; i<=tablica.length-1;i++)
         {
             if(tablica[i] < max1 && tablica[i] > max2)
             {
              max2 = tablica[i];  
+             
             }
             
         }
@@ -61,12 +64,14 @@ public class JavaApplication2 {
     {
         int max1 = NajwiekszaLiczba(tablica);
         int max2 = DrugaNajwiekszaLiczba(tablica);
+       
         int max3 = tablica[0];
         for (int i = 0; i<=tablica.length-1;i++)
         {
             if(tablica[i] < max2 && tablica[i] < max1 && tablica[i] > max3)
             {
              max3 = tablica[i];  
+            
             }
             
         }
@@ -83,6 +88,24 @@ public class JavaApplication2 {
         wynik = NajwiekszaLiczba(tablica) * DrugaNajwiekszaLiczba(tablica) * TrzeciaNajwiekszaLiczba(tablica);
         
         return wynik;
+    }
+    
+    public static int[] Triplet(int[] tablica, int NajwiekszaLiczba, int DrugaNajwiekszaLiczba, int TrzeciaNajwiekszaLiczba)
+    {
+        int[] triplet = new int[2];
+        int j = 0;
+        for (int i=0; i <= tablica.length-1; i++)
+        {
+            if(tablica[i]== NajwiekszaLiczba || tablica[i]== DrugaNajwiekszaLiczba || tablica[i]== TrzeciaNajwiekszaLiczba)
+            
+            {
+                triplet[j] = i;
+                j++;
+            }
+        }
+        
+        
+        return triplet;
     }
     
 }
